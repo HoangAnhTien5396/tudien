@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="tudien"> Từ điển</h2>
+    <input id="tien" type="text">
+    <input id="bam" type="button" value="Dịch" onclick=dich()>
+    <p id="dich"></p>
+    <script>
+        var a = ["One", "Two", "Three", "Four", "Five", "Six", "Seven"]
+        var b = ["Số một", "Số hai", "Số ba", "Số bốn", "Số năm", "Số sáu", "Số bảy"]
+
+        function dich() {
+            var c = document.getElementById("tien").value;
+            for (let i = 0; i < a.length; i++) {
+                if (c === a[i]) {
+                    document.getElementById("dich").innerHTML = b[i]
+                    break
+                } else {
+                    if (a === b[i]) {
+                        document.getElementById("dich").innerHTML = a[i]
+                        break
+                    } else {
+                        document.getElementById("dich").innerHTML = "No"
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
